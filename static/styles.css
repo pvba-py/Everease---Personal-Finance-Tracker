@@ -1,0 +1,396 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient Background */
+}
+
+/* Login Container */
+.login-container {
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    transform: translateY(-30px); /* Slight upward shift */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* Input Styles */
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #3498db; /* Blue border on focus */
+}
+
+/* Button Styles */
+.btn-container {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #3498db; /* Vibrant blue */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-5px); /* Slight upward movement */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #95a5a6;
+    font-weight: 300;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animation for Fade-in Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
+    }
+}
+
+/* Home Page Container */
+.home-container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Welcome Message */
+.home-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.home-container p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-buttons .btn {
+    width: 80%;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #e74c3c;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+/* General Page Styling */
+.page-container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.page-container h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.page-container p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+form input,
+form select {
+    width: 90%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #3498db;
+}
+
+/* Button Styling */
+.action-btn {
+    width: 90%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background-color: #3498db;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+}
+
+/* Back Button */
+.back-btn {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* General Page Styling */
+.page-container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Page Headers */
+.page-container h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.page-container p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+form input {
+    width: 90%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #3498db;
+}
+
+/* Expense List */
+.expense-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.expense-list li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+/* Buttons */
+.action-btn {
+    width: 90%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background-color: #3498db;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+}
+
+/* Back Button */
+.back-btn {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+.page-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#emi-result {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
