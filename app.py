@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 import os
 
 app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY', 'your-secret-key-here')
+app.secret_key = 'flask-secret-placeholder'
 
 users = {
     "demo_user": {"password": "demo123", "budget": None, "expenses": []},
