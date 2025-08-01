@@ -54,7 +54,7 @@ A simple and intuitive personal finance tracker built with Flask. Manage budgets
 
 ## Demo
 
-Check out the `Everease Output.pdf` file in this repository to see screenshots of the application in action, including all features and user interfaces.
+Check out the [Everease Output.pdf](./Everease%20Output.pdf) file in this repository to see screenshots of the application in action, including all features and user interfaces.
 
 ## Technologies Used
 
