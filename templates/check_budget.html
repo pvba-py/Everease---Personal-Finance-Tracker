@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Alert</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="page-container">
+        <h1>Budget Status</h1>
+
+        {% if budget_exceeded %}
+        <p style="color: red; font-weight: bold;">⚠ You have exceeded your budget!</p>
+        {% else %}
+        <p style="color: green;">✅ You are within your budget.</p>
+        {% endif %}
+
+        <a href="{{ url_for('home') }}" class="back-btn">⬅ Back to Home</a>
+    </div>
+
+</body>
+</html>

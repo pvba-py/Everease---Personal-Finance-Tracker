@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - EverEase</title>
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Welcome to EverEase</h1>
+            <p>Your Personal Finance Tracker</p>
+        </header>
+        <div class="button-container">
+            <a href="{{ url_for('login') }}" class="btn">Login</a>
+        </div>
+    </div>
+</body>
+</html>

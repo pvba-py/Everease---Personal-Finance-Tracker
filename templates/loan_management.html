@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="page-container">
+        <h1>Loan Management & EMI Tracker</h1>
+        <p>Track your loan, repayments, and EMI calculations.</p>
+
+        <!-- Display Loan Summary -->
+        <ul>
+            <li>💰 Current Loan: ₹{{ loan_amount if loan_amount else 'N/A' }}</li>
+            <li>📅 Due Date: {{ due_date if due_date else 'Not Set' }}</li>
+        </ul>
+
+        <!-- Loan EMI Calculator Form -->
+        <form id="loan-form">
+            <label for="loan_amount">Loan Amount (₹):</label>
+            <input type="number" id="loan_amount" name="loan_amount" required>
+
+            <label for="interest_rate">Annual Interest Rate (%):</label>
+            <input type="number" id="interest_rate" name="interest_rate" step="0.01" required>
+
+            <label for="loan_tenure">Tenure (Months):</label>
+            <input type="number" id="loan_tenure" name="loan_tenure" required>
+
+            <button type="submit">Calculate EMI</button>
+        </form>
+
+        <!-- EMI Result Display -->
+        <div id="emi-result" style="display: none;">
+            <h2>EMI Details</h2>
+            <p><strong>Monthly EMI:</strong> ₹<span id="emi-value"></span></p>
+            <p><strong>Total Interest:</strong> ₹<span id="total-interest"></span></p>
+            <p><strong>Total Payment:</strong> ₹<span id="total-payment"></span></p>
+        </div>
+
+        <a href="{{ url_for('home') }}" class="back-btn">⬅ Back to Home</a>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#loan-form").submit(function(event) {
+                event.preventDefault();
+                
+                var loanAmount = parseFloat($("#loan_amount").val());
+                var interestRate = parseFloat($("#interest_rate").val()) / 100 / 12;
+                var tenure = parseInt($("#loan_tenure").val());
+
+                if (loanAmount > 0 && interestRate >= 0 && tenure > 0) {
+                    var emi = (loanAmount * interestRate * Math.pow(1 + interestRate, tenure)) / 
+                              (Math.pow(1 + interestRate, tenure) - 1);
+
+                    var totalPayment = emi * tenure;
+                    var totalInterest = totalPayment - loanAmount;
+
+                    $("#emi-value").text(emi.toFixed(2));
+                    $("#total-interest").text(totalInterest.toFixed(2));
+                    $("#total-payment").text(totalPayment.toFixed(2));
+                    $("#emi-result").show();
+                } else {
+                    alert("Please enter valid loan details!");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EverEase - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <div class="home-container">
+        <header>
+            <h1>Welcome, {{ user }}!</h1>
+            <p>Manage your finances with ease.</p>
+        </header>
+
+        <div class="nav-buttons">
+            <a href="{{ url_for('add_expense') }}" class="btn">Add Expense</a>
+            <a href="{{ url_for('view_summary') }}" class="btn">View Summary</a>
+            <a href="{{ url_for('check_budget') }}" class="btn">Check Budget Alert</a>
+            <a href="{{ url_for('loan_management') }}" class="btn">Loan Management</a>
+            <a href="{{ url_for('logout') }}" class="btn logout-btn">Logout</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
